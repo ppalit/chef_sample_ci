@@ -14,19 +14,9 @@ variables:
   KITCHEN_LOCAL_YAML: "kitchen.yml"
 
 stages:
-  - lint
   - unit
   - functional
 
-foodcritic:
-  stage: lint
-  script:
-  - chef exec foodcritic .
-
-cookstyle:
-  stage: lint
-  script:
-  - chef exec cookstyle .
 
 chefspec:
   stage: unit

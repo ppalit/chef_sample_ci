@@ -49,7 +49,7 @@ describe 'org_base::default' do
 
     it 'creates the hello.txt file' do
       expect(chef_run).to create_file('creates the hello.txt file')
-        .with(path: '~test/hello.txt')
+        .with(path: '/home/test/hello.txt')
         .with(content: 'hello test')
         .with(mode: '0600')
         .with(owner: 'test')

@@ -17,8 +17,8 @@ describe 'org_base::default' do
     end
 
     it 'creates the jamie user' do
-      expect(chef_run).to create_user('create user jamie')
-        .with(username: 'jamie')
+      expect(chef_run).to create_user('create user userName')
+        .with(username: 'userName')
         .with(group: nil)
     end
 

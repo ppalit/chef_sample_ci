@@ -1,9 +1,8 @@
 name 'org_base'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Priyabrata Palit'
+maintainer_email 'priyabrata.palit@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures org_base'
-long_description 'Installs/Configures org_base'
 version '0.1.0'
 chef_version '>= 14.0'
 

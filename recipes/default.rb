@@ -15,7 +15,6 @@ user "create user #{node['user']}" do
   manage_home true
 end
 
-
 file 'creates the hello.txt file' do
   path "/home/#{node['user']}/hello.txt"
   content "hello #{node['user']}"

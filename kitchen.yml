@@ -1,21 +1,21 @@
+---
 driver:
-  name: docker
+  name: dokken
+  chef_version: 17 # or 16 or 16.0 or 16.0.300 or current
+
+transport:
+  name: dokken
 
 provisioner:
-  name: chef_zero
-  always_update_cookbooks: true
-  chef_license: accept
-  product_name: chef
-  product_version: 15
+  name: dokken
 
 verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu
-
-transport:
-  name: docker
+- name: centos-7
+  driver:
+    image: dokken/centos-7
 
 suites:
   - name: default
@@ -28,6 +28,3 @@ suites:
       group: 'everybody'
       user: 'test'
       hello: true
-
-
-

@@ -13,7 +13,7 @@ variables:
   DOCKER_HOST: tcp://docker:2375
   DOCKER_DRIVER: overlay
   DOCKER_TLS_CERTDIR: ''
-  KITCHEN_LOCAL_YAML: .kitchen.dokken.yml
+  KITCHEN_LOCAL_YAML: .kitchen.yml
   CHEF_LICENSE: accept-no-persist
 
 stages:

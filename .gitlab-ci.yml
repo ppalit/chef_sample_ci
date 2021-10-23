@@ -39,8 +39,7 @@ chefspec:
 integration_test:
   stage: functional
   before_script:
-  - apt-get update
-  - apt-get -y install rsync
+    - chef --version
   script:
   - chef exec kitchen test 
 

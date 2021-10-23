@@ -1,9 +1,10 @@
+---
 driver:
   name: dokken
   privileged: true
 
 provisioner:
-  name: chef_zero
+  name: dokken
   always_update_cookbooks: true
   chef_license: accept
   product_name: chef
@@ -13,7 +14,10 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu
+- name: amazon
+  driver:
+    image: dokken/amazonlinux-2
+    pid_one_command: /usr/lib/systemd/systemd
 
 transport:
   name: dokken

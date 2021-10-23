@@ -12,6 +12,9 @@ gems.locked
 bin/*
 .bundle/*
 
+#rspec reports
+rspec.xml
+
 # test kitchen
 .kitchen/
 kitchen.local.yml

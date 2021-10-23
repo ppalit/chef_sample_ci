@@ -17,14 +17,25 @@ variables:
   CHEF_LICENSE: accept-no-persist
 
 stages:
+  - lint
   - unit
   - functional
 
+cookstyle:
+  stage: lint
+  script:
+  - chef exec cookstyle .
 
 chefspec:
   stage: unit
   script:
-  - chef exec rspec spec
+  - chef exec rspec
+  artifacts:
+    when: always
+    paths:
+      - rspec.xml
+    reports:
+      junit: rspec.xml
 
 # Set up your test matrix here. Example:
 #verify-centos-6:

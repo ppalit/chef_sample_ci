@@ -12,6 +12,7 @@ services:
 variables:
   DOCKER_HOST: "tcp://docker:2375"
   KITCHEN_LOCAL_YAML: "kitchen.yml"
+  CHEF_LICENSE: accept-no-persist
 
 stages:
   - unit

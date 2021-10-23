@@ -13,9 +13,9 @@ verifier:
   name: inspec
 
 platforms:
-- name: centos-7
+- name: amazonlinux-2
   driver:
-    image: dokken/centos-7
+    image: dokken/amazonlinux-2
 
 suites:
   - name: default
